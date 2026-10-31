@@ -1,0 +1,18 @@
+[
+  {"source": "ent-kb-02", "target": "ent-enterprise-01",
+   "relation": "part_of", "evidence_refs": ["prj-1517-arch"]},
+  {"source": "ent-bot-03", "target": "ent-kb-02",
+   "relation": "references", "evidence_refs": ["prj-1489-delivery"]},
+  {"source": "ent-routing-04", "target": "ent-kb-02",
+   "relation": "references", "evidence_refs": ["prj-1492-delivery"]},
+  {"source": "ent-taxonomy-05", "target": "ent-kb-02",
+   "relation": "part_of", "evidence_refs": ["prj-1517-taxonomy"]},
+  {"source": "ent-method-06", "target": "ent-kb-02",
+   "relation": "part_of", "evidence_refs": ["prj-1508-method-wiring"]},
+  {"source": "ent-ops-07", "target": "ent-kb-02",
+   "relation": "depends_on", "evidence_refs": ["prj-1506-ops-metric"]},
+  {"source": "ent-taxonomy-05", "target": "ent-method-06",
+   "relation": "depends_on", "evidence_refs": ["prj-1517-taxonomy"]},
+  {"source": "ent-ops-07", "target": "ent-taxonomy-05",
+   "relation": "references", "evidence_refs": ["prj-1506-ops-metric"]}
+]
