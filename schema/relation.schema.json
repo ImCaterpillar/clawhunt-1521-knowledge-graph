@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "知识图谱关系",
+  "type": "object",
+  "required": ["source", "target", "relation", "evidence_refs"],
+  "additionalProperties": false,
+  "properties": {
+    "source": { "type": "string", "pattern": "^ent-[a-z][a-z0-9-]{2,47}$" },
+    "target": { "type": "string", "pattern": "^ent-[a-z][a-z0-9-]{2,47}$" },
+    "relation": {
+      "type": "string",
+      "enum": ["employs", "uses", "depends_on", "implements",
+               "manages", "references", "part_of", "produces",
+               "reviewed_by"]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 }
+    }
+  }
+}
